@@ -1,4 +1,3 @@
-import { NextApiRequest } from 'next'
 import { NextResponse } from 'next/server'
 
 export interface ITypeMe {
@@ -17,6 +16,6 @@ export const me: ITypeMe = {
 		'<p>The main mission is to create cool and interesting and beautiful projects for your development. Thank you for visiting this site 😊 </p>',
 }
 
-export async function GET(req: NextApiRequest) {
+export async function GET() {
 	return NextResponse.json(me)
 }

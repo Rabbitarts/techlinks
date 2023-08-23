@@ -2,7 +2,7 @@
 
 import Circles from '@/components/ui/circles/Circles'
 import { FC } from 'react'
-import { ITypeLinks } from '../api/links/links.interface'
+import { ITypeLinks } from '../../assets/data/links/links.interface'
 import { ITypeMe } from '../api/me/route'
 import AboutMe from './about-me/AboutMe'
 import Grid from './grid/Grid'

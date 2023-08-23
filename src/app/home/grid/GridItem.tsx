@@ -1,6 +1,6 @@
 import AnimateBlock from '@/components/ui/animate-block/AnimateBlock'
 import { FC } from 'react'
-import { ITypeLinks } from '../../api/links/links.interface'
+import { ITypeLinks } from '../../../assets/data/links/links.interface'
 
 import styles from './/Grid.module.scss'
 
@@ -19,7 +19,7 @@ const GridItem: FC<{ item: ITypeLinks }> = ({ item }) => {
 				}}
 			>
 				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img src={item.icon.path} alt='' width={item.icon.width} />
+				<img src={item.icon.path} alt={item.title} width={item.icon.width} />
 			</div>
 			<div className={styles.title}>{item.title}</div>
 			{item.isImportant && <AnimateBlock />}
