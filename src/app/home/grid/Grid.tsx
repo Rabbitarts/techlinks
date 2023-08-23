@@ -1,4 +1,4 @@
-import { ITypeLinks } from '../../../assets/data/links/links.interface'
+import { ITypeLinks } from '@/assets/data/links/links.interface'
 import { FC } from 'react'
 
 import styles from './Grid.module.scss'
