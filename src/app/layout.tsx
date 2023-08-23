@@ -1,4 +1,4 @@
-import { SITE_NAME } from '@/config/url.config'
+import { getSiteUrl, SITE_NAME } from '@/config/url.config'
 import Provider from '@/provider/Provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 	},
 	title: 'Tech Links | All useful links here',
 	description: 'My links',
-	// metadataBase: new URL(getSiteUrl()),
+	metadataBase: new URL(getSiteUrl()),
 	openGraph: {
 		type: 'website',
 		siteName: SITE_NAME,
