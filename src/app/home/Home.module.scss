@@ -1,0 +1,16 @@
+@import '/src/assets/_media.scss';
+
+.main {
+	@apply min-h-screen relative overflow-hidden;
+
+	.container {
+		@apply max-w-[1000px] mx-auto relative z-10;
+
+		@include respond(laptop) {
+			max-width: 90%;
+		}
+		@include respond(mobile) {
+			max-width: 94%;
+		}
+	}
+}

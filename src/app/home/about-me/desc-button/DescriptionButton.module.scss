@@ -1,0 +1,31 @@
+@import '../../../../assets/media';
+
+.wrapper {
+	@apply absolute top-5 right-5;
+	@include respond(tablet) {
+		@apply top-2 right-2;
+	}
+	@include respond(mobile) {
+		@apply top-1 right-1;
+	}
+
+	> button {
+		@apply border-none outline-none bg-bg hover:bg-black transition py-2 px-4 rounded-xl;
+
+		@include respond(mobile) {
+			@apply px-3 py-1.5;
+		}
+	}
+
+	> article {
+		@apply animate-scaleIn absolute right-0 top-10 bg-bg rounded-md text-[15px] px-4 text-left w-[28rem] shadow z-20 border border-[#404040];
+
+		@include respond(tablet) {
+			width: 26.5rem;
+		}
+		@include respond(mobile) {
+			@apply top-8 px-2 z-20 text-[0.8rem];
+			width: 19.5rem;
+		}
+	}
+}

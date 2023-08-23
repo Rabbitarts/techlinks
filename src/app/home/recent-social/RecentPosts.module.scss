@@ -1,0 +1,46 @@
+@import '/src/assets/_media.scss';
+
+.wrapper {
+	@apply bg-secondary border border-[#404040] rounded-xl p-3 flex items-center flex-wrap min-h-[70px];
+	@include respond(tablet) {
+		@apply p-2;
+	}
+
+	.heading {
+		@apply text-lg inline-block mr-6;
+		@include respond(laptop) {
+			@apply mr-4;
+		}
+		@include respond(tablet) {
+			@apply mr-0 text-center text-xl mb-2 w-full;
+		}
+	}
+}
+
+.item {
+	@apply flex items-center bg-bg hover:bg-black rounded-lg transition-colors py-2 px-3 animate-fade duration-300 ease-in-out w-[40%];
+
+	@include respond(laptop) {
+		@apply py-1 px-2;
+		width: 37%;
+	}
+
+	@include respond(tablet) {
+		@apply py-1 px-2;
+		width: 100%;
+	}
+
+	&:last-child {
+		@apply ml-6;
+		@include respond(laptop) {
+			@apply ml-4;
+		}
+		@include respond(tablet) {
+			@apply ml-0 mt-2;
+		}
+	}
+
+	> img {
+		@apply mr-3 rounded-md;
+	}
+}

@@ -1,0 +1,56 @@
+@import '/src/assets/_media.scss';
+
+.me {
+	@apply mt-40 mb-6 text-center bg-secondary border border-[#404040] relative rounded-xl transition-all duration-700;
+	@include respond(laptop) {
+		@apply mt-28;
+	}
+	@include respond(tablet) {
+		@apply mt-20 mb-4;
+	}
+	@include respond(mobile) {
+		@apply mt-16 mb-3;
+	}
+
+	.imageWrapper {
+		@apply mb-6;
+		@include respond(tablet) {
+			@apply mb-4;
+		}
+		@include respond(mobile) {
+			@apply mb-2;
+		}
+
+		> span {
+			@apply inline-block;
+			margin-top: -3rem !important;
+
+			@include respond(tablet) {
+				width: 150px !important;
+				height: 150px !important;
+			}
+			@include respond(mobile) {
+				width: 120px !important;
+				height: 120px !important;
+				margin-top: -2.5rem !important;
+			}
+		}
+	}
+
+	.heading {
+		@apply flex items-center justify-center mb-5 text-3xl font-semibold;
+		@include respond(tablet) {
+			@apply text-2xl mb-4;
+		}
+		@include respond(mobile) {
+			@apply text-2xl mb-2;
+		}
+
+		> span {
+			@apply mr-2;
+			@include respond(mobile) {
+				@apply mr-1;
+			}
+		}
+	}
+}

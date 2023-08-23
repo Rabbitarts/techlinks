@@ -1,0 +1,32 @@
+@import '../../../../assets/media';
+
+.button {
+	@apply inline-block text-center mb-7;
+	@include respond(tablet) {
+		@apply mb-3;
+	}
+	@include respond(mobile) {
+		@apply mb-2;
+	}
+
+	> a {
+		@apply flex items-center bg-bg hover:bg-black rounded-xl transition py-2 px-4 text-lg;
+
+		@include respond(tablet) {
+			@apply text-base py-1 px-3;
+		}
+
+		span:first-child {
+			@apply inline-flex items-center justify-center mr-2.5;
+			@include respond(tablet) {
+				@apply mr-2;
+				width: 16px;
+				height: 16px;
+			}
+			@include respond(mobile) {
+				width: 14px;
+				height: 14px;
+			}
+		}
+	}
+}

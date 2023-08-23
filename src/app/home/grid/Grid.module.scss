@@ -1,0 +1,36 @@
+@import '/src/assets/_media.scss';
+
+.grid {
+	@apply flex flex-wrap mt-6 mb-10 gap-[1rem];
+
+	.item {
+		@apply relative;
+		flex: 1 1 calc((100% / 4) - 2rem);
+		@include respond(tablet) {
+			flex: 1 1 calc((100% / 2) - 2rem);
+		}
+
+		.main {
+			@apply flex justify-center items-center h-32 rounded-tl-layout rounded-br-layout border-[#404040] border relative z-10 duration-500 transition-all;
+		}
+
+		&:hover {
+			.main {
+				@apply rounded-tl-none rounded-br-none rounded-bl-layout rounded-tr-layout;
+				box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+				background-position: right center;
+			}
+
+			> div:nth-child(3) {
+				@apply hidden;
+			}
+		}
+
+		.title {
+			@apply opacity-80 font-medium mt-2 mb-1 text-[1.09rem];
+			@include respond(tablet) {
+				@apply mb-0;
+			}
+		}
+	}
+}
