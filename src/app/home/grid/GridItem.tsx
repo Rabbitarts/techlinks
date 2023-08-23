@@ -18,6 +18,7 @@ const GridItem: FC<{ item: ITypeLinks }> = ({ item }) => {
 					backgroundColor: item.background,
 				}}
 			>
+				{/* eslint-disable-next-line @next/next/no-img-element */}
 				<img src={item.icon.path} width={item.icon.width} />
 			</div>
 			<div className={styles.title}>{item.title}</div>
