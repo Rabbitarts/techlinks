@@ -7,9 +7,11 @@ import GridItem from './GridItem'
 const Grid: FC<{ links: ITypeLinks[] }> = ({ links }) => {
 	return (
 		<div className={styles.grid}>
-			{links.map(link => (
-				<GridItem key={link.id} item={link} />
-			))}
+			{links.length ? (
+				links.map(link => <GridItem key={link.id} item={link} />)
+			) : (
+				<div>No enough data</div>
+			)}
 		</div>
 	)
 }
