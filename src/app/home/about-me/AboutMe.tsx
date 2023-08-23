@@ -1,10 +1,10 @@
-import { ITypeMe } from '@/app/api/me/route'
 import Image from 'next/image'
 import { FC } from 'react'
 import DescriptionButton from './desc-button/DescriptionButton'
 import EmailButton from './email-button/EmailButton'
 
 import styles from './AboutMe.module.scss'
+import { ITypeMe } from '@/assets/data/me'
 
 const AboutMe: FC<{ me: ITypeMe }> = ({ me }) => {
 	return (
